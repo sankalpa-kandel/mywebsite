@@ -1809,10 +1809,12 @@ h1, h2, h3, h4, h5,
     position: absolute;
     top: 50%;
     right: 0;
+    left: 0;
+    
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    font-size: 12vw;
+    font-size: 24vw;
     text-transform: uppercase;
     z-index: 1;
     color: #fff;
@@ -1826,6 +1828,8 @@ h1, h2, h3, h4, h5,
 .home-wrap .half {
   width: 50%;
   background: #000000; }
+
+
 
 .owl-carousel {
   position: relative; }
@@ -2203,8 +2207,8 @@ textarea.form-control {
     width: 50px;
     display: block;
     float: left;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 50%;
+    /* background: rgba(255, 255, 255, 0.05); */
+    /* border-radius: 50%; */
     position: relative; }
     .ftco-footer-social li a span {
       position: absolute;
@@ -2838,3 +2842,10 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+    /* @media (max-width:400px) {
+      .half .order-md-last{
+        display:none;
+      }
+    } */
