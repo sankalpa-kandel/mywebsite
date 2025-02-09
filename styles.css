@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f0e3;
+    font-family: 'Indie Flower', cursive; /* Handwritten font */
+    background-image: url('images/nepali-pattern.png'); /* Nepali pattern background */
+    background-size: cover;
+}
+
+.envelope {
+    position: relative;
+    width: 500px; /* Increased size */
+    height: 300px; /* Increased size */
+    background: #ff9999; /* Lighter red color */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ff9999; /* Lighter red color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.5s;
+}
+
+.cover p {
+    margin: 0;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.cover img.stamp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px; /* Increased size */
+    height: 70px; /* Increased size */
+    border-radius: 50%;
+}
+
+.letter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.5s;
+}
+
+.letter .page1, .letter .page2 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.letter .page1 {
+    background: #ffcccb; /* Baby pink color */
+}
+
+.letter .page2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    text-align: center; /* Center text horizontally */
+}
+
+.letter .page2 img {
+    width: 150px; /* Increased size */
+    height: 150px; /* Increased size */
+    border-radius: 50%;
+    margin-bottom: 20px; /* Space between photo and message */
+    object-fit: cover; /* Maintain aspect ratio */
+    aspect-ratio: 1 / 1; /* Fixed aspect ratio */
+}
+
+.letter.open .page1 {
+    display: block;
+}
+
+.letter.open .page2 {
+    display: none;
+}
+
+.letter.show-page2 .page1 {
+    display: none;
+}
+
+.letter.show-page2 .page2 {
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #e60000;
+}
+
+#noBtn {
+    position: relative;
+}
+
+@keyframes bounce {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(50px, 50px); }
+    50% { transform: translate(0, 100px); }
+    75% { transform: translate(-50px, 50px); }
+    100% { transform: translate(0, 0); }
+}
